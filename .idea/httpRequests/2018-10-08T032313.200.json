@@ -1,0 +1,17 @@
+[
+  {
+    "teamId": 100,
+    "teamName": "Old Christans",
+    "teamLeague": 1
+  },
+  {
+    "teamId": 101,
+    "teamName": "St. Marys",
+    "teamLeague": 3
+  },
+  {
+    "teamId": 103,
+    "teamName": "Waterford City",
+    "teamLeague": 1
+  }
+]

@@ -1,0 +1,540 @@
+GET http://localhost:3000/teams/51/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T054226.404.html
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T054214.200.json
+
+###
+
+PUT http://localhost:3000/teams/5bbb75728efb4c2b58218a29/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T054124.200.json
+
+###
+
+PUT http://localhost:3000/teams/5bbb75728efb4c2b58218a29/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+###
+
+PUT http://localhost:3000/teams/5bbb75728efb4c2b58218a29/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+###
+
+POST http://localhost:3000/teams/5bbb75728efb4c2b58218a29/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T054049.404.html
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T054033.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T041917.200.json
+
+###
+
+POST http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":5, "teamName":"Kinsale", "teamLeague":1}
+
+<> 2018-10-08T041914.200.json
+
+###
+
+GET http://localhost:3000/teams/5bbb6a0fc91f08ffa28927c3
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040815.200.json
+
+###
+
+GET http://localhost:3000/teams/5bbb6a0fc91f08ffa28927c3
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040749.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040742.200.json
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040525.200.json
+
+###
+
+PUT http://localhost:3000/teams/5bbb6a43c91f08ffa28927c6/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040500.200.html
+
+###
+
+GET http://localhost:3000/teams/5bbb6a43c91f08ffa28927c6
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040449.200.json
+
+###
+
+PUT http://localhost:3000/teams/103/5bbb6a43c91f08ffa28927c6
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040440.404.html
+
+###
+
+GET http://localhost:3000/teams/103/5bbb6a43c91f08ffa28927c6
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040435.404.html
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040427.200.json
+
+###
+
+PUT http://localhost:3000/teams/103/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040418.200.html
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040410.200.json
+
+###
+
+PUT http://localhost:3000/teams/103/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040358.500.html
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040339.200.json
+
+###
+
+PUT http://localhost:3000/teams/103/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040220.500.html
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040213.200.json
+
+###
+
+GET http://localhost:3000/teams/103
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040148.200.json
+
+###
+
+GET http://localhost:3000/teams/103/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040144.404.html
+
+###
+
+PUT http://localhost:3000/teams/103/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T040139.200.html
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035806.200.json
+
+###
+
+POST http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035803.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035757.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035727.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035554.200.json
+
+###
+
+POST http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035551.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035540.200.json
+
+###
+
+GET http://localhost:3000/teams/100
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035107.200.json
+
+###
+
+GET http://localhost:3000/teams/100
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035025.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T035022.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T034652.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T032313.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T032309.200.json
+
+###
+
+DELETE http://localhost:3000/teams/102
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T032305.200.json
+
+###
+
+GET http://localhost:3000/teams
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T032255.200.json
+
+###
+
+PUT http://localhost:3000/teams/100/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T031755.200.json
+
+###
+
+PUT http://localhost:3000/teams/100/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T031742.200.json
+
+###
+
+PUT http://localhost:3000/teams/100/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T031726.200.html
+
+###
+
+PUT http://localhost:3000/teams/100/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T031622.500.html
+
+###
+
+PUT http://localhost:3000/teams/100/updateLeague
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"teamId":0, "teamName":"Waterpark", "teamLeague":2}
+
+<> 2018-10-08T031555.200.json
+
+###
+
