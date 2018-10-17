@@ -24,9 +24,9 @@ router.findAll = (req, res) => {
     Team.find(function (err, teams) {
         if (err) {
             res.send(err);
+        } else {
+            res.send(JSON.stringify(teams, null, 5))
         }
-
-        res.send(JSON.stringify(teams, null, 5))
     });
 };
 
@@ -42,6 +42,28 @@ router.findOne = (req, res) => {
     })
 };
 
+router.findBySport = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    Team.find({'teamSport' : req.params.teamSport}, function (err, foundTeams) {
+        if (err) {
+            res.send("Error, Team not found")
+        } else {
+            res.send(JSON.stringify(foundTeams,null,5))
+        }
+    })
+};
+
+router.findByLeague = (req, res) => {
+    res.setHeader('Content-type', 'application/json');
+    Team.find({'teamLeague' : req.params.teamLeague}, function(err, foundTeams) {
+        if (err) {
+            res.send("Error, Teams not found")
+        } else {
+            res.send(JSON.stringify(foundTeams,null,5))
+        }
+    })
+};
+
 function getByValue(array, teamId) {
     var result  = array.filter(function(obj){return obj.teamId == teamId;} );
     return result ? result[0] : null; // or undefined
@@ -51,9 +73,11 @@ router.addTeam = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     var team = new Team();
-    team.teamId = Math.floor((Math.random() * 100) + 1); //Randomly generate an id
+    team._id = Math.floor((Math.random() * 100) + 1); //Randomly generate an id
     team.teamName = req.body.teamName;
     team.teamLeague = req.body.teamLeague;
+    team.teamSport = req.body.teamSport;
+    team.numberOfPitches = req.body.numberOfPitches;
 
     team.save(function(err){
         if (err)
@@ -65,7 +89,7 @@ router.addTeam = (req, res) => {
 
 router.updateLeague = (req, res) => {
 
-    Team.findById(req.params.teamId, function (err, team) {
+    Team.findById(req.params._id, function (err, team) {
         if (err)
             res.send("Error, Team NOT found")
         else {
@@ -81,15 +105,13 @@ router.updateLeague = (req, res) => {
 };
 
 router.deleteTeam = (req, res) => {
-    var foundTeam = getByValue(teams, req.params.teamId);
-    var position = teams.indexOf(foundTeam);
-    var currentSize = teams.length;
-    teams.splice(position, 1);
-    if((currentSize - 1) == teams.length) {
-        res.json({message : "Team Successfully removed"})
-    } else {
-        res.json({message : "Team was NOT removed"})
-    }
+    Team.findOneAndDelete(req.params._id, function(err) {
+        if(err) {
+            res.send("Error Deleting Team")
+        } else {
+            res.send("Team Deleted")
+        }
+    });
 };
 
 
