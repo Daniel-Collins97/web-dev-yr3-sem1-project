@@ -71,11 +71,6 @@ router.findByLeague = (req, res) => {
     })
 };
 
-function getByValue(array, teamId) {
-    var result  = array.filter(function(obj){return obj.teamId == teamId;} );
-    return result ? result[0] : null; // or undefined
-}
-
 router.addTeam = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 

@@ -64,11 +64,6 @@ router.findBySport = (req, res) => {
     })
 };
 
-function getByValue(array, playerId) {
-    var result  = array.filter(function(obj){return obj.playerId == playerId;} );
-    return result ? result[0] : null; // or undefined
-}
-
 router.addPlayer = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
@@ -104,6 +99,16 @@ router.deletePlayer = (req, res) => {
             res.send("Error Deleting Player")
         } else {
             res.send("Player Deleted")
+        }
+    });
+};
+
+router.totalPlayers = (req,res) => {
+    Player.find(function(err,players) {
+        if(err) {
+            res.send("Error, players not found")
+        } else {
+            res.send("There are " + players.length.toString() + " players in this collection")
         }
     });
 };

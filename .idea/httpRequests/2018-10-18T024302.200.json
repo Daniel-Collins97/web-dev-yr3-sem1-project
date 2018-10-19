@@ -1,0 +1,34 @@
+[
+  {
+    "playerAge": 23,
+    "_id": 45,
+    "playerName": "Mark Hunt",
+    "playerPosition": "Wing-Back",
+    "playerSport": "football",
+    "__v": 0
+  },
+  {
+    "playerAge": 21,
+    "_id": 22,
+    "playerName": "Tom Franky",
+    "playerPosition": "Prop",
+    "playerSport": "rugby",
+    "__v": 0
+  },
+  {
+    "playerAge": 22,
+    "_id": 15,
+    "playerName": "Joseph Plunket",
+    "playerPosition": "Striker",
+    "playerSport": "soccer",
+    "__v": 0
+  },
+  {
+    "playerAge": 24,
+    "_id": 59,
+    "playerName": "Im updated",
+    "playerPosition": "Winger",
+    "playerSport": "soccer",
+    "__v": 0
+  }
+]
