@@ -89,26 +89,17 @@ router.addPlayer = (req, res) => {
 
 router.updatePlayer = (req, res) => {
 
-    Player.findById(req.params._id, function (err, player) {
-        if (err)
+    Player.findByIdAndUpdate(req.params.id, req.body, {new: true}, function (err, player) {
+        if (err) {
             res.send("Error, Player NOT found")
-        else {
-            player.playerName = req.body.playerName;
-            player.playerPosition = req.body.playerPosition;
-            player.playerSport = req.body.playerSport;
-            player.playerAge = req.body.playerAge;
-            player.save(function (err) {
-                if (err)
-                    res.send("Error Saving Player")
-                else
-                    res.send("Player Saved")
-            });
+        } else {
+            res.send("Player" + player.playerName.toString() + " Saved")
         }
     });
 };
 
 router.deletePlayer = (req, res) => {
-    Player.findOneAndDelete(req.params._id, function(err) {
+    Player.findOneAndDelete(req.params.id, function(err) {
         if(err) {
             res.send("Error Deleting Player")
         } else {

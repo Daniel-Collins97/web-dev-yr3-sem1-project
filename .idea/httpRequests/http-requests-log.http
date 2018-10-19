@@ -1,3 +1,23 @@
+PUT http://localhost:3000/players/59/updatePlayer
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "_id" : 1, "playerName" : "Im changed", "playerPosition" : "Winger", "playerSport" : "soccer", "playerAge" : 24 }
+
+###
+
+GET http://localhost:3000/players
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"_id":5, "teamName":"Kinsale", "teamLeague":3, "teamSport":"rugby"}
+
+<> 2018-10-18T024302.200.json
+
+###
+
 GET http://localhost:3000/teams
 Accept: application/json
 Cache-Control: no-cache
@@ -513,28 +533,6 @@ Content-Type: application/json
 {"teamId":7, "teamName":"Waterpark", "teamLeague":2}
 
 <> 2018-10-08T040500.200.html
-
-###
-
-GET http://localhost:3000/teams/5bbb6a43c91f08ffa28927c6
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
-
-<> 2018-10-08T040449.200.json
-
-###
-
-PUT http://localhost:3000/teams/103/5bbb6a43c91f08ffa28927c6
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
-
-<> 2018-10-08T040440.404.html
 
 ###
 

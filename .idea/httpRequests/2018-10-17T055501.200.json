@@ -1,0 +1,65 @@
+[
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 2,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 8,
+    "teamName": "Waterford City RFC",
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 10,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 1,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 3,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 6,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 9,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 7,
+    "__v": 0
+  },
+  {
+    "teamLeague": 1,
+    "numberOfPitches": 1,
+    "_id": 5,
+    "__v": 0
+  },
+  {
+    "teamLeague": 3,
+    "numberOfPitches": 1,
+    "_id": 4,
+    "teamName": "Kinsale",
+    "teamSport": "rugby",
+    "__v": 0
+  }
+]

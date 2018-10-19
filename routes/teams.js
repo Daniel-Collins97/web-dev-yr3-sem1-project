@@ -3,9 +3,16 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 var Team = require('../models/teams');
-var mongodbUri = 'mongodb://ScreamerD12:Daniel_joseph1@ds161112.mlab.com:61112/donations-assignment';
+var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+    replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } },
+    user: 'ScreamerD12', pass: 'Daniel_joseph1' };
 
-mongoose.connect(mongodbUri);
+var mongodbUri = 'mongodb://ScreamerD12:Daniel_joseph1@ds161112.mlab.com:61112/donations-assignment';
+var mongooseUri =require('mongodb-uri').formatMongoose(mongodbUri);
+
+
+//mongoose.connect('mongodb://localhost:27017/donationsdb');
+mongoose.connect(mongooseUri,options);
 
 let db = mongoose.connection;
 
@@ -87,29 +94,33 @@ router.addTeam = (req, res) => {
     });
 };
 
-router.updateLeague = (req, res) => {
+router.updateTeam = (req, res) => {
 
-    Team.findById(req.params._id, function (err, team) {
-        if (err)
+    Team.findByIdAndUpdate(req.params.id, req.body, {new: true}, function (err, team) {
+        if (err) {
             res.send("Error, Team NOT found")
-        else {
-            team.teamLeague +=1;
-            team.save(function (err) {
-                if (err)
-                    res.send("Error Saving Team")
-                else
-                    res.send("Team Saved")
-            });
+        } else {
+            res.send("Team " + team.teamName.toString() + " Saved")
         }
     });
 };
 
 router.deleteTeam = (req, res) => {
-    Team.findOneAndDelete(req.params._id, function(err) {
+    Team.findByIdAndRemove(req.params.id, function(err) {
         if(err) {
             res.send("Error Deleting Team")
         } else {
             res.send("Team Deleted")
+        }
+    });
+};
+
+router.totalTeams = (req,res) => {
+    Team.find(function(err,teams) {
+        if(err) {
+            res.send("Error, teams not found")
+        } else {
+            res.send("There are " + teams.length.toString() + " teams in this collection")
         }
     });
 };

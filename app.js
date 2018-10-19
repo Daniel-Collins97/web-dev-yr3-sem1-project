@@ -25,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.get('/teams', teams.findAll);
+app.get('/teams/totalTeams', teams.totalTeams);
 app.get('/players', players.findAll);
 app.get('/teams/:id', teams.findOne);
 app.get('/players/:id', players.findOne);
@@ -35,10 +36,11 @@ app.get('/players/playerSport/:playerSport', players.findBySport);
 
 app.post('/teams', teams.addTeam);
 app.post('/players', players.addPlayer);
-app.put('/teams/:id/updateLeague', teams.updateLeague);
+
+app.put('/teams/:id/updateTeam', teams.updateTeam);
 app.put('/players/:id/updatePlayer', players.updatePlayer);
 
-app.delete('/teams/:teamId', teams.deleteTeam);
+app.delete('/teams/:id', teams.deleteTeam);
 app.delete('/players/:playerID', players.deletePlayer);
 
 // catch 404 and forward to error handler
