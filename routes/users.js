@@ -46,20 +46,18 @@ router.login = (req, res) => {
         if (err) {
             res.send("Error, that email is not associated with any User")
         } else {
-            bcrypt.compare(req.body.password, foundUser[0].password, (err, result) => {
-                if (err) {
-                    res.send("Auth Failed")
-                } else if (result) {
-                    const token = jwt.sign({
-                        email: foundUser[0].email,
-                        id: foundUser[0]._id
-                    }, JWT_KEY, {expiresIn: "1h"})
-                    res.json({message: "Auth Successful, User Logged in", token: token})
-                }
-            })
+            if (req.body.password.toString() != foundUser[0].password.toString()) {
+                res.send("Auth Failed")
+            } else {
+                const token = jwt.sign({
+                    email: foundUser[0].email,
+                    id: foundUser[0]._id
+                }, JWT_KEY, {expiresIn: "1h"});
+                res.json({message: "Auth Successful, User Logged in", token: token})
+            }
         }
-    })
-}
+    });
+};
 
 
 router.findAll = (req, res) => {
