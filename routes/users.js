@@ -1,7 +1,6 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
 var mongodbUri = 'mongodb://ScreamerD12:Daniel_joseph1@ds161112.mlab.com:61112/donations-assignment';
 const User = require('../models/users');
 const jwt = require('jsonwebtoken');
@@ -27,25 +26,19 @@ router.signUp = (req, res) => {
             if (user.length >= 1) {
                 res.send("User with this email already exists!")
             } else {
-                bcrypt.hash(req.body.password, 10, (err, hash) => {
-                    if (err) {
-                        res.send("Error occurred when hashing password")
-                    } else {
-                        var user = new User();
-                        user._id = Math.floor((Math.random() * 100) + 1);
-                        user.email = req.body.email;
-                        user.password = hash;
+                var user = new User();
+                user._id = Math.floor((Math.random() * 100) + 1);
+                user.email = req.body.email;
+                user.password = req.body.password;
 
-                        user.save(function (err) {
-                            if (err)
-                                res.send("Error, User was NOT added");
-                            else
-                                res.send("User ADDED successfully");
-                        });
-                    }
+                user.save(function (err) {
+                    if (err)
+                        res.send("Error, User was NOT added");
+                    else
+                        res.send("User ADDED successfully");
                 });
             }
-        })
+        });
 };
 
 router.login = (req, res) => {
@@ -57,7 +50,10 @@ router.login = (req, res) => {
                 if (err) {
                     res.send("Auth Failed")
                 } else if (result) {
-                    const token = jwt.sign({email: foundUser[0].email, id: foundUser[0]._id}, JWT_KEY, {expiresIn: "1h"})
+                    const token = jwt.sign({
+                        email: foundUser[0].email,
+                        id: foundUser[0]._id
+                    }, JWT_KEY, {expiresIn: "1h"})
                     res.json({message: "Auth Successful, User Logged in", token: token})
                 }
             })
@@ -81,18 +77,18 @@ router.findAll = (req, res) => {
 
 router.findByEmail = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    User.find({'email' : req.params.email}, function (err, foundUser) {
+    User.find({'email': req.params.email}, function (err, foundUser) {
         if (err) {
             res.send("Error, User not found")
         } else {
-            res.send(JSON.stringify(foundUser,null,5))
+            res.send(JSON.stringify(foundUser, null, 5))
         }
     })
 };
 
-router.deleteUser= (req, res) => {
-    User.findByIdAndRemove(req.params.id, function(err) {
-        if(err) {
+router.deleteUser = (req, res) => {
+    User.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
             res.send("Error Deleting User")
         } else {
             res.send("User Deleted")
@@ -100,9 +96,9 @@ router.deleteUser= (req, res) => {
     });
 };
 
-router.totalUsers = (req,res) => {
-    User.find(function(err,users) {
-        if(err) {
+router.totalUsers = (req, res) => {
+    User.find(function (err, users) {
+        if (err) {
             res.send("Error, Users not found")
         } else {
             res.send("There are " + users.length.toString() + " users in this collection")
