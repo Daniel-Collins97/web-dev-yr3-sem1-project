@@ -5,17 +5,6 @@ let mongoose = require('mongoose');
 var Player = require('../models/players');
 var mongodbUri = 'mongodb://ScreamerD12:Daniel_joseph1@ds161112.mlab.com:61112/donations-assignment';
 
-mongoose.connect(mongodbUri);
-
-let db = mongoose.connection;
-
-db.on('error', function (err) {
-    console.log('Unable to connect to [' + db.name + ']', err);
-});
-
-db.once('open', function () {
-    console.log('Successfully connected to [' + db.name + ']');
-});
 
 router.findAll = (req, res) => {
     //Return JSON representation of list
@@ -94,7 +83,7 @@ router.updatePlayer = (req, res) => {
 };
 
 router.deletePlayer = (req, res) => {
-    Player.findOneAndDelete(req.params.id, function(err) {
+    Player.findByIdAndRemove(req.params.id, function(err) {
         if(err) {
             res.send("Error Deleting Player")
         } else {

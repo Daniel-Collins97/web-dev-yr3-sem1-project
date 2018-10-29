@@ -3,16 +3,10 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 var Team = require('../models/teams');
-var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
-    replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } },
-    user: 'ScreamerD12', pass: 'Daniel_joseph1' };
-
 var mongodbUri = 'mongodb://ScreamerD12:Daniel_joseph1@ds161112.mlab.com:61112/donations-assignment';
-var mongooseUri =require('mongodb-uri').formatMongoose(mongodbUri);
 
 
-//mongoose.connect('mongodb://localhost:27017/donationsdb');
-mongoose.connect(mongooseUri,options);
+mongoose.connect(mongodbUri);
 
 let db = mongoose.connection;
 
