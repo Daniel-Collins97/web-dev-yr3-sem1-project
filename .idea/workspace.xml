@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="324bc2a9-f8e2-479f-811c-50744e59d40f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auth/check-auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/pitches.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pitches.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/players.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/players.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/teams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,7 +81,7 @@
           <entry key="css" value="9" />
           <entry key="ejs" value="260" />
           <entry key="js" value="7016" />
-          <entry key="txt" value="101" />
+          <entry key="txt" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -98,14 +89,14 @@
           <entry key="CSS" value="9" />
           <entry key="EJS" value="260" />
           <entry key="JavaScript" value="7016" />
-          <entry key="PLAIN_TEXT" value="101" />
+          <entry key="PLAIN_TEXT" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ejs" value="2" />
           <entry key="js" value="28" />
-          <entry key="json" value="1" />
+          <entry key="json" value="2" />
           <entry key="rnc" value="1" />
           <entry key="www" value="1" />
         </counts>
@@ -113,9 +104,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="EJS" value="2" />
-          <entry key="JSON" value="1" />
+          <entry key="JSON" value="2" />
           <entry key="JavaScript" value="29" />
           <entry key="RNG Compact" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -194,11 +190,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="73">
+              <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -1467,7 +1472,7 @@
       <workItem from="1539952629404" duration="43000" />
       <workItem from="1539959074748" duration="3801000" />
       <workItem from="1540370133094" duration="1691000" />
-      <workItem from="1540831257901" duration="10323000" />
+      <workItem from="1540831257901" duration="11057000" />
     </task>
     <task id="LOCAL-00001" summary="added player collection">
       <created>1539800223571</created>
@@ -1497,29 +1502,44 @@
       <option name="project" value="LOCAL" />
       <updated>1539960013001</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Authentication">
+      <created>1540841860752</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540841860752</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Authentication">
+      <created>1540842304115</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540842304115</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52527000" />
+    <option name="totallyTimeSpent" value="53261000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="634" y="0" width="652" height="686" extended-state="0" />
+    <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.273906" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.27344993" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32972974" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5007949" side_tool="true" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3291815" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="5" sideWeight="0.49920508" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.2054054" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49920508" weight="0.49288255" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.6049822" />
       <window_info anchor="bottom" x="0" y="23" width="1281" height="658" id="REST Client" order="10" type="WINDOWED" weight="0.5495495" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -1539,7 +1559,8 @@
     <MESSAGE value="checked all functions" />
     <MESSAGE value="added third schema" />
     <MESSAGE value="Chnaged title headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chnaged title headers" />
+    <MESSAGE value="Added Authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Authentication" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_3.http">
@@ -1624,9 +1645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/players.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1664,8 +1682,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state relative-caret-position="73">
+          <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
