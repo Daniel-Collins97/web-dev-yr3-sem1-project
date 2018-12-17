@@ -68,7 +68,7 @@ router.findAll = (req, res) => {
         if (err) {
             res.send(err);
         } else {
-            res.send(JSON.stringify(users, null, 5))
+            res.send(users, null, 5)
         }
     });
 };
@@ -79,7 +79,7 @@ router.findByEmail = (req, res) => {
         if (err) {
             res.send("Error, User not found")
         } else {
-            res.send(JSON.stringify(foundUser, null, 5))
+            res.send(foundUser, null, 5)
         }
     })
 };

@@ -24,7 +24,7 @@ router.findAll = (req, res) => {
         if (err) {
             res.send(err);
         } else {
-            res.send(JSON.stringify(pitches, null, 5))
+            res.send(pitches, null, 5)
         }
     });
 };
@@ -37,7 +37,7 @@ router.findOne = (req, res) => {
         if (err)
             res.send("Error, Pitch NOT found")
         else
-            res.send(JSON.stringify(foundPitch,null,5))
+            res.send(foundPitch,null,5)
     })
 };
 
@@ -47,7 +47,7 @@ router.findByLocation = (req, res) => {
         if (err) {
             res.send("Error, Pitches not found")
         } else {
-            res.send(JSON.stringify(foundPitches,null,5))
+            res.send(foundPitches,null,5)
         }
     })
 };
@@ -58,7 +58,7 @@ router.findBySport = (req, res) => {
         if (err) {
             res.send("Error, Pitches not found")
         } else {
-            res.send(JSON.stringify(foundPitches,null,5))
+            res.send(foundPitches,null,5)
         }
     })
 };

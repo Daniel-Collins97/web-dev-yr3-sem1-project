@@ -26,7 +26,7 @@ router.findAll = (req, res) => {
         if (err) {
             res.send(err);
         } else {
-            res.send(JSON.stringify(teams, null, 5))
+            res.send(teams, null, 5)
         }
     });
 };

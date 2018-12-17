@@ -1,3 +1,14 @@
+POST http://localhost:3000/addPlayers
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"_id":5, "playerName":"Pete Burns", "playerPosition":"Striker", "playerSport":"soccer","playerAge":23}
+
+<> 2018-12-14T011929.200.json
+
+###
+
 PUT http://localhost:3000/players/59/updatePlayer
 Accept: application/json
 Cache-Control: no-cache
@@ -522,17 +533,6 @@ Content-Type: application/json
 {"teamId":7, "teamName":"Waterpark", "teamLeague":2}
 
 <> 2018-10-08T040525.200.json
-
-###
-
-PUT http://localhost:3000/teams/5bbb6a43c91f08ffa28927c6/updateLeague
-Accept: application/json
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"teamId":7, "teamName":"Waterpark", "teamLeague":2}
-
-<> 2018-10-08T040500.200.html
 
 ###
 

@@ -3,13 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 const teams = require("./routes/teams");
 const players = require("./routes/players");
 const pitches = require("./routes/pitches");
 const users = require("./routes/users");
-const checkAuth = require('./auth/check-auth');
+//const checkAuth = require('./auth/check-auth');
 
 var app = express();
 
@@ -17,6 +18,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -46,20 +48,20 @@ app.get('/pitches/pitchLocation/:pitchLocation', pitches.findByLocation);
 
 
 //Protected Routes
-app.post('/teams', checkAuth, teams.addTeam);
-app.post('/players', checkAuth, players.addPlayer);
-app.post('/pitches', checkAuth,pitches.addPitch);
-app.post('/users/signUp',users.signUp);
+app.post('/addTeams', teams.addTeam);
+app.post('/addPlayers', players.addPlayer);
+app.post('/addPitch',pitches.addPitch);
+app.post('/addUsers/signUp',users.signUp);
 app.post('/users/login', users.login);
 
-app.put('/teams/:id/updateTeam', checkAuth, teams.updateTeam);
-app.put('/players/:id/updatePlayer', checkAuth,players.updatePlayer);
-app.put('/pitches/:id/updatePitch', checkAuth,pitches.updatePitch);
+app.put('/teams/:id/updateTeam', teams.updateTeam);
+app.put('/players/:id/updatePlayer',players.updatePlayer);
+app.put('/pitches/:id/updatePitch',pitches.updatePitch);
 
-app.delete('/teams/:id', checkAuth,teams.deleteTeam);
-app.delete('/players/:id', checkAuth,players.deletePlayer);
-app.delete('/pitch/:id', checkAuth,pitches.deletePitch);
-app.delete('/users/:id', checkAuth,users.deleteUser);
+app.delete('/teams/:id',teams.deleteTeam);
+app.delete('/players/:id',players.deletePlayer);
+app.delete('/pitch/:id',pitches.deletePitch);
+app.delete('/users/:id',users.deleteUser);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -14,7 +14,7 @@ router.findAll = (req, res) => {
         if (err) {
             res.send(err);
         } else {
-            res.send(JSON.stringify(players, null, 5))
+            res.send(players, null, 5)
         }
     });
 };
@@ -27,7 +27,7 @@ router.findOne = (req, res) => {
         if (err)
             res.send("Error, Player NOT found")
         else
-            res.send(JSON.stringify(foundPlayer,null,5))
+            res.send(foundPlayer,null,5)
     })
 };
 
@@ -37,7 +37,7 @@ router.findByPosition = (req, res) => {
         if (err) {
             res.send("Error, Players not found")
         } else {
-            res.send(JSON.stringify(foundPlayer,null,5))
+            res.send(foundPlayer,null,5)
         }
     })
 };
@@ -48,7 +48,7 @@ router.findBySport = (req, res) => {
         if (err) {
             res.send("Error, Players not found")
         } else {
-            res.send(JSON.stringify(foundPlayers,null,5))
+            res.send(foundPlayers,null,5)
         }
     })
 };
