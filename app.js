@@ -12,7 +12,12 @@ const pitches = require("./routes/pitches");
 const users = require("./routes/users");
 //const checkAuth = require('./auth/check-auth');
 
+
+
+
 var app = express();
+
+
 
 
 // view engine setup
@@ -25,6 +30,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next) {
+    var schema = req.headers['x-forwarded-proto'];
+
+    if (schema === 'https') {
+        // Already https; don't do anything special.
+        next();
+    }
+    else {
+        // Redirect to https.
+        res.redirect('https://' + req.headers.host + req.url);
+    }
+});
 
 app.use('/', indexRouter);
 
@@ -80,17 +98,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.use(function(req, res, next) {
-    var schema = req.headers['x-forwarded-proto'];
 
-    if (schema === 'https') {
-        // Already https; don't do anything special.
-        next();
-    }
-    else {
-        // Redirect to https.
-        res.redirect('https://' + req.headers.host + req.url);
-    }
-});
 
 module.exports = app;
