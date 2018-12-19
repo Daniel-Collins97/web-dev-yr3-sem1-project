@@ -93,7 +93,7 @@ router.updatePitch = (req, res) => {
 };
 
 router.deletePitch = (req, res) => {
-    Pitch.findOneAndDelete(req.params.id, function(err) {
+    Pitch.findByIdAndRemove(req.params.id, function(err) {
         if(err) {
             res.send("Error Deleting Pitch")
         } else {

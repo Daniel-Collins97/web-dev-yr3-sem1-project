@@ -14,6 +14,7 @@ const users = require("./routes/users");
 
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -58,9 +59,9 @@ app.put('/teams/:id/updateTeam', teams.updateTeam);
 app.put('/players/:id/updatePlayer',players.updatePlayer);
 app.put('/pitches/:id/updatePitch',pitches.updatePitch);
 
-app.delete('/teams/:id',teams.deleteTeam);
-app.delete('/players/:id',players.deletePlayer);
-app.delete('/pitch/:id',pitches.deletePitch);
+app.delete('/deleteTeam/:id',teams.deleteTeam);
+app.delete('/deletePlayer/:id',players.deletePlayer);
+app.delete('/deletePitch/:id',pitches.deletePitch);
 app.delete('/users/:id',users.deleteUser);
 
 // catch 404 and forward to error handler
@@ -77,6 +78,14 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.use(function requireHTTPS(req, res, next) {
+    // The 'x-forwarded-proto' check is for Heroku
+    if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+        return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
 });
 
 module.exports = app;
